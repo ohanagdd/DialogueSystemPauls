@@ -13,7 +13,17 @@ public class DialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             dialogueBox.Display(dialogue);
-            // send the dialogue to the dialogue box
+            
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            dialogueBox.Hide();
+        }
+    }
+
+
 }

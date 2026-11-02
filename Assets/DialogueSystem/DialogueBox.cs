@@ -11,8 +11,21 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] 
     private Image portrait;
 
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+
     internal void Display(Dialogue dialogue)
     {
-        throw new NotImplementedException();
+        
+        gameObject.SetActive(true);
+        StartCoroutine(dialogue.Display(content));
+
+    }
+
+    internal void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }
