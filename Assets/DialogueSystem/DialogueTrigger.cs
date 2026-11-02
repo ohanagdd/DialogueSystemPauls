@@ -13,7 +13,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             dialogueBox.Display(dialogue);
-            // send dialogue to the dialogue box
+            // send the dialogue to the dialogue box
         }
     }
 }
